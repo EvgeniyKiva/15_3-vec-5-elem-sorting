@@ -6,11 +6,19 @@ int main() {
     int element;
     std::cout << "Enter a number. (-1) to output the result. (-2 shutdown)" << std::endl;
     std:: cin>> element;
+
     while (element!=-2){
+
         while (element!=-1){
+
             vec.push_back(element);
             std::cout << "Enter a number. (-1) to output the result. (-2 shutdown)" << std::endl;
             std:: cin>> element;
+        }
+        while (vec.size()<5){
+            std::cout << "There should be 5 elements. Enter another element." << std::endl;
+            std:: cin>> element;
+            vec.push_back(element);
         }
         for (int i=0; i<vec.size(); i++){
             for (int j=0; j<vec.size()-i-1; j++){
